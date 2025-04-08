@@ -24,6 +24,7 @@ const TaskInput = () => {
         onChange={(e) => setText(e.target.value)} 
         placeholder="Add a task..." 
       />
+      {/* Dropdown for selecting task priority */}
       <select 
         className="form-select" 
         value={priority} 

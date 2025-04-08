@@ -3,7 +3,7 @@ import './WeatherSidebar.css';
 
 const WeatherSidebar = () => {
   const [city, setCity] = useState('Delhi');
-  const [weather, setWeather] = useState(null);
+  const [weather, setWeather] = useState(null);   // Weather data returned from API
   const [error, setError] = useState('');
 
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
@@ -15,6 +15,7 @@ const WeatherSidebar = () => {
       const fetchWeather = async () => {
         try {
           setError('');
+          // Fetch weather data from API if city length is 3 or more characters
           if (city.length >= 3) {
             const encodedCity = encodeURIComponent(city);
             const res = await fetch(
@@ -42,8 +43,8 @@ const WeatherSidebar = () => {
   return (
     <div className="weather-info fade-in">
     <div className="weather-sidebar p-3 border rounded">
-    
-      <h5 className="mb-3">🌤️ Weather Info</h5>
+    {/* Show weather info if available */}
+      <h5 className="mb-3">Weather Info</h5>
       <input
         type="text"
         className="form-control mb-2"
@@ -61,11 +62,11 @@ const WeatherSidebar = () => {
             alt={weather.current.condition.text}
           />
           <p><strong>{weather.current.condition.text}</strong></p>
-          <p>🌡️ Temp: {weather.current.temp_c} °C (Feels like {weather.current.feelslike_c}°C)</p>
-          <p>💧 Humidity: {weather.current.humidity}%</p>
-          <p>💨 Wind: {weather.current.wind_kph} km/h {weather.current.wind_dir}</p>
-          <p>☁️ Cloud cover: {weather.current.cloud}%</p>
-          <p>📅 Updated at: {weather.current.last_updated}</p>
+          <p>Temp: {weather.current.temp_c} °C (Feels like {weather.current.feelslike_c}°C)</p>
+          <p>Humidity: {weather.current.humidity}%</p>
+          <p>Wind: {weather.current.wind_kph} km/h {weather.current.wind_dir}</p>
+          <p>Cloud cover: {weather.current.cloud}%</p>
+          <p>Updated at: {weather.current.last_updated}</p>
         </div>
       )}
     </div>

@@ -5,7 +5,7 @@ import { deleteTask } from '../redux/tasks/taskSlice';
 const TaskList = () => {
   const tasks = useSelector((state) => state.tasks.taskList);
   const dispatch = useDispatch();
-
+//   sort task by priority
   const sortedTasks = [...tasks].sort((a, b) => {
     const priority = { High: 1, Medium: 2, Low: 3 };
     return priority[a.priority] - priority[b.priority];

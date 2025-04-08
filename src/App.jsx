@@ -7,6 +7,7 @@ import { login, logout } from './redux/auth/authSlice';
 import './App.css';
 
 const App = () => {
+  // Accessing authentication state from Redux store
   const { isAuthenticated } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
@@ -18,7 +19,7 @@ const App = () => {
 
       <div className="container-fluid app-content py-4">
         <div className="row">
-          {/* Task Section */}
+          {/* Task Section (On left side for desktop) */}
           <div className="col-md-8 mb-4">
             <div className="task-section p-4 rounded shadow-sm bg-white">
               {isAuthenticated ? (
@@ -32,6 +33,7 @@ const App = () => {
                       Logout
                     </button>
                   </div>
+                  {/* task functionality */}
                   <TaskInput />
                   <TaskList />
                 </>
