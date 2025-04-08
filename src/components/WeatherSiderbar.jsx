@@ -24,7 +24,7 @@ const WeatherSidebar = () => {
             const data = await res.json();
             setWeather(data);
           } else {
-            setWeather(null); // Clear previous weather if input is too short
+            setWeather(null); 
           }
         } catch (err) {
           setWeather(null);
@@ -33,7 +33,7 @@ const WeatherSidebar = () => {
       };
 
       fetchWeather();
-    }, 500); // debounce delay: 500ms
+    }, 500); 
 
     // Clear the timeout if city changes before 500ms
     return () => clearTimeout(timer);

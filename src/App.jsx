@@ -18,7 +18,7 @@ const App = () => {
 
       <div className="container-fluid app-content py-4">
         <div className="row">
-          {/* Main Task Section */}
+          {/* Task Section */}
           <div className="col-md-8 mb-4">
             <div className="task-section p-4 rounded shadow-sm bg-white">
               {isAuthenticated ? (
@@ -59,7 +59,7 @@ const App = () => {
       </div>
 
       <footer className="app-footer text-center py-3">
-        <p className="mb-0 small">© {new Date().getFullYear()} YourAppName — Built with ❤️</p>
+        <p className="mb-0 small">© {new Date().getFullYear()} To do list</p>
       </footer>
     </div>
   );
