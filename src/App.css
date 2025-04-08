@@ -1,0 +1,74 @@
+/* === GLOBAL RESETS === */
+
+*{
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;   /* 🔒 stop side scroll */
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* === LAYOUT WRAPPERS === */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: #343a40;
+}
+
+.app-content {
+  flex: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* === SECTIONS === */
+.task-section {
+  background-color: #fff;
+  min-height: 200px;
+}
+
+.weather-section {
+  background-color: #e9f7fa;
+  min-height: 200px;
+}
+
+/* === FOOTER === */
+.app-footer {
+  background-color: #e9ecef;
+  color: #495057;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+/* === RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .task-section,
+  .weather-section {
+    padding: 1rem;
+  }
+}
+
+/* === IMAGES, INPUTS, ETC: Prevent overflow === */
+img, input, textarea, iframe, div {
+  max-width: 100%;
+}

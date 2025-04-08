@@ -1,0 +1,55 @@
+.weather-sidebar {
+    max-width: 250px;
+    background-color: #f0f8ff;
+  }
+ .weather-sidebar {
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  min-height: 100%;
+}
+
+.weather-sidebar h5 {
+  font-weight: bold;
+  color: #00796b;
+}
+
+.weather-sidebar input.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.weather-sidebar img {
+  height: 64px;
+  margin-bottom: 8px;
+}
+
+.weather-sidebar h6 {
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #004d40;
+}
+
+.weather-sidebar p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.weather-sidebar .text-danger {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+   
